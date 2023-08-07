@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int pow(int n,int m)
+{
+    if(m==0)
+    {
+        return 1;
+    }
+    return n*pow(n,m-1);
+}
+
+int main()
+{
+    int n,m;
+    cout<<"Enter the integer : ";
+    cin>>n;
+    cout<<"Enter the power : ";
+    cin>>m;
+
+    cout<<"The value of "<<n<<" to the power "<<m<<" is : "<<pow(n,m);
+}
