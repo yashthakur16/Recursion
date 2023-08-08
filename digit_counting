@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void digitcount(int k,string arr[])
+{
+    if(k==0)
+    {
+        return;
+    }
+    int digit=k%10;
+    k=k/10;
+    digitcount(k,arr);
+    cout<<arr[digit]<<" ";
+}
+
+int main()
+{
+    string arr[10]={"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+    int k=0;
+    cout<<"Enter the integer : ";
+    cin>>k;
+
+    digitcount(k,arr);
+}
