@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int fibo(int k)
+{
+    if(k==1)
+    {
+        return 1;
+    }
+    if(k==0)
+    {
+        return 0;
+    }
+
+    return fibo(k-1)+fibo(k-2);
+}
+
+int main()
+{
+    int k=0;
+    cout<<"Enter the index : ";
+    cin>>k;
+    cout<<"The element at the index "<<k<<" of the fibonnacci series is : "<<fibo(k);
+}
