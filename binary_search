@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int search(int arr[],int n,int k,int s,int e)
+{
+    
+    if(s>=e)
+    {
+        return -1;
+    }
+    int mid=s+(e-s/(2));
+
+    if(arr[mid]==k)
+    {
+        return mid;
+    }
+    if(arr[mid]<k)
+    {
+        search(arr,n,k,mid+1,e);
+    }
+    if(arr[mid]>k)
+    {
+        search(arr,n,k,s,mid-1);
+    }
+}
+
+int main()
+{
+    int arr[10]={6,7,18,26,34,46,46,46,84,97};
+    cout<<"Enter the key : ";
+    int k ;
+    cin>>k;
+    cout<<search(arr,10,k,0,9);
+    return 0;
+}
