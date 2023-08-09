@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+bool search(int arr[],int n,int m)
+{   
+    if(n==0)
+    {
+        return false;
+    }
+    if(arr[0]==m)
+    {
+        return true;
+    }
+    return search(arr+1,n-1,m);
+}
+
+int main()
+{
+    int arr[10]={56,43,1,4,76,44,65,46,26,75};
+    int m;
+    cout<<"Number to be searched : ";
+    cin>>m;
+    if(search(arr,10,m)==1)
+    {
+        cout<<"Number present ";
+    }
+
+    else 
+    {
+        cout<<"Number not present ";
+    }
+}
