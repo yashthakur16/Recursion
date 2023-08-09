@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int sum(int arr[],int n)
+{
+    
+    if(n==1)
+    {
+        return arr[0];
+    }
+    return arr[0]+sum(arr+1,n-1);
+}
+
+int main()
+{
+    int arr[6]={9,9,9,9,9,5};
+    int n=6;
+    cout<<"The array is "<<sum(arr,n);
+    
+    return 0;
+
+
+}
