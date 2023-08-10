@@ -1,0 +1,33 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+bool palindrome(int i,int j, string s)
+{
+    if(s[i]!=s[j])
+    {
+        return false;
+    }
+    if(i>j)
+    {
+        return true;
+    }
+    return palindrome(i+1,j-1,s);
+}
+
+
+
+int main()
+{
+    string s="nayan";
+    int n=5;
+    cout<<"The given string is ";
+    if(palindrome(0,n-1,s))
+    {
+        cout<<"a palindrome";
+    }
+    else
+    {
+        cout<<"not a palindrome ";
+    }
+}
