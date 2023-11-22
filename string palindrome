@@ -28,6 +28,6 @@ int main()
     }
     else
     {
-        cout<<"not a palindrome ";
+        cout<<"not a palindrome";
     }
 }
