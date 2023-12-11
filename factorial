@@ -17,7 +17,6 @@ int main()
     cout<<"Enter the integer : ";
     cin>>n;
 
-
     cout<<"The factorial of "<<n<<" is "<<fact(n);
 
 }
